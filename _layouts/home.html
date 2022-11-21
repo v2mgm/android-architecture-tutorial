@@ -1,0 +1,72 @@
+---
+layout: home-page
+regenerate: true
+---
+
+{% if site.data.navs.root %}
+{% for item in site.data.navs.root %}
+
+<h3 data-bs-toggle="collapse" class="title collapsed" href="#{{item.sub[0].id}}">
+  {{item.title}}
+</h3>
+
+{% if item.sub %}
+<div id="{{item.sub[0].id}}" class="collapse">
+  {% for item in item.sub %}
+  {% if item.url %}
+  <li class="subIndent">
+    <a href="{{ item.url }}" target="_blank">
+      {{item.title}}
+    </a>
+  </li>
+  {% else %}
+  <h4 class="subIndent title collapsed" data-bs-toggle="collapse" href="#{{item.subsub[0].id}}">
+    {{item.title}}
+  </h4>
+  {%- endif -%}
+  {% if item.subsub %}
+  <div id="{{item.subsub[0].id}}" class="collapse">
+    {% for item in item.subsub %}
+
+    {% if item.url %}
+    <li class="subsubIndent">
+      <a href="{{ item.url }}" target="_blank">
+        {{item.title}}
+      </a>
+    </li>
+    {% else %}
+    <h5 class="subsubIndent title collapsed" data-bs-toggle="collapse" href="#{{item.subsubsub[0].id}}">
+      {{item.title}}
+    </h5>
+    {% endif %}
+
+    {% if item.subsubsub %}
+    <div id="{{item.subsubsub[0].id}}" class="collapse">
+      {% for item in item.subsubsub %}
+      {% if item.url %}
+      <li class="subsubsubIndent">
+        <a href="{{ item.url }}" target="_blank">
+          {{item.title}}
+        </a>
+      </li>
+      {% else %}
+      <li class="subsubsubIndent">
+        {{item.title}}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    {%- endif -%}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+  {% endfor %}
+</div>
+{% endif %}
+
+
+{% endfor %}
+{% endif %}

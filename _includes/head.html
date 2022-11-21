@@ -1,0 +1,80 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+
+  <style>
+    @font-face {
+      font-family: Sahel;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel.ttf ");
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel.eot?#iefix") format("embedded-opentype"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel.woff2") format("woff2"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel.woff") format("woff"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel.ttf") format("truetype");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: Sahel;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Bold.eot");
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Bold.eot?#iefix") format("embedded-opentype"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Bold.woff2") format("woff2"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Bold.woff") format("woff"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Bold.ttf") format("truetype");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: Sahel;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Light.eot");
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Light.eot?#iefix") format("embedded-opentype"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Light.woff2") format("woff2"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Light.woff") format("woff"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Light.ttf") format("truetype");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: Sahel;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-SemiBold.eot");
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-SemiBold.eot?#iefix") format("embedded-opentype"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-SemiBold.woff2") format("woff2"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-SemiBold.woff") format("woff"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: Sahel;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Black.eot");
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Black.eot?#iefix") format("embedded-opentype"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Black.woff2") format("woff2"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Black.woff") format("woff"),
+      url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/sahel/Sahel-Black.ttf") format("truetype");
+      font-weight: 900;
+    }
+
+    @font-face {
+      font-family: Fantasque;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/FantasqueSansMono/regular.ttf") format("truetype");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: Fantasque;
+      src: url("{{  relative }}{{ site.baseurl }}/assets/lib/fonts/FantasqueSansMono/bold.ttf") format("truetype");
+      font-weight: bold;
+    }
+  </style>
+
+  <script src="{{ relative }}{{ site.baseurl }}/assets/lib/bootstrap/bootstrap.js"></script>
+  <link rel="stylesheet" href="{{  relative }}{{ site.baseurl }}/assets/css/style.css" />
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  {%- include custom-head.html -%}
+
+</head>

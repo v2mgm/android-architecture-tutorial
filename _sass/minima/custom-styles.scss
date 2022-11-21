@@ -1,0 +1,77 @@
+.subIndent{
+  text-indent: 30px;
+}
+.subsubIndent{
+  text-indent: 60px;
+}
+.subsubsubIndent{
+  text-indent: 90px;
+}
+
+
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
+}
+
+.title{
+  cursor: pointer;
+  user-select: none;
+}
+
+[class="title collapsed"]::before{
+  content: "+";
+}
+[class="title"]::before{
+  content: "-";
+}
+[class="subIndent title collapsed"]::before{
+  content: "+";
+}
+[class="subIndent title"]::before{
+  content: "-";
+}
+[class="subsubIndent title collapsed"]::before{
+  content: "+";
+}
+[class="subsubIndent title"]::before{
+  content: "-";
+}
+
+img[src*='#center'] {
+  display: block;
+  margin: auto;
+}
+
+.post-title{
+  font-family: Fantasque;
+  text-align: center;
+  direction: ltr;
+}
+
+.custum-title{
+  font-family: Fantasque;
+  text-align: center;
+  direction: ltr;
+}
+
+

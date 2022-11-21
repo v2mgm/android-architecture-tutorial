@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+// @font-face {
+//   font-family: Sahel;
+//   src: url('/assets/lib/fonts/sahel/Sahel.ttf ');
+//   src: url('/assets/lib/fonts/sahel/Sahel.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/lib/fonts/sahel/Sahel.woff2') format('woff2'),
+//        url('/assets/lib/fonts/sahel/Sahel.woff') format('woff'),
+//        url('/assets/lib/fonts/sahel/Sahel.ttf') format('truetype');
+//   font-weight: normal;
+// }
+      
+// @font-face {
+//   font-family: Sahel;
+//   src: url('/assets/lib/fonts/sahel/Sahel-Bold.eot');
+//   src: url('/assets/lib/fonts/sahel/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/lib/fonts/sahel/Sahel-Bold.woff2') format('woff2'),
+//        url('/assets/lib/fonts/sahel/Sahel-Bold.woff') format('woff'),
+//        url('/assets/lib/fonts/sahel/Sahel-Bold.ttf') format('truetype');
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: Sahel;
+//   src: url('/assets/lib/fonts/sahel/Sahel-Light.eot');
+//   src: url('/assets/lib/fonts/sahel/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/lib/fonts/sahel/Sahel-Light.woff2') format('woff2'),  
+//        url('/assets/lib/fonts/sahel/Sahel-Light.woff') format('woff'),
+//        url('/assets/lib/fonts/sahel/Sahel-Light.ttf') format('truetype');
+//   font-weight: 300;
+// }
+      
+// @font-face {
+//   font-family: Sahel;
+//   src: url('/assets/lib/fonts/sahel/Sahel-SemiBold.eot');
+//   src: url('/assets/lib/fonts/sahel/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/lib/fonts/sahel/Sahel-SemiBold.woff2') format('woff2'),  
+//        url('/assets/lib/fonts/sahel/Sahel-SemiBold.woff') format('woff'),
+//        url('/assets/lib/fonts/sahel/Sahel-SemiBold.ttf') format('truetype');
+//   font-weight: 600;
+// }
+
+// @font-face {
+//   font-family: Sahel;
+//   src: url('/assets/lib/fonts/sahel/Sahel-Black.eot') ;
+//   src: url('/assets/lib/fonts/sahel/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/lib/fonts/sahel/Sahel-Black.woff2') format('woff2'),  
+//        url('/assets/lib/fonts/sahel/Sahel-Black.woff') format('woff'),
+//        url('/assets/lib/fonts/sahel/Sahel-Black.ttf') format('truetype');
+//   font-weight: 900;
+// }
+// @font-face {
+//   font-family: Fantasque;
+//        src: url('/assets/lib/fonts/FantasqueSansMono/regular.ttf') format('truetype');
+//   font-weight: normal;
+//   // unicode-range: U+20-5F, U+61-7A, U+7C, U+A0, U+A7, U+A9, U+2010-2011, U+2013-2014, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2032-2033, U+20AC;
+// }
+// @font-face {
+//   font-family: Fantasque;
+//        src: url('/assets/lib/fonts/FantasqueSansMono/bold.ttf') format('truetype');
+//   font-weight: bold;
+//   // unicode-range: U+20-5F, U+61-7A, U+7C, U+A0, U+A7, U+A9, U+2010-2011, U+2013-2014, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2032-2033, U+20AC;
+// }
+
+
+// pre, code {
+//   font-family: 'Fantasque', 'Fantasque Hack', monospaced;
+// }
+
+$base-font-family: Sahel, -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto,
+  Helvetica, Arial, sans-serif !default;
+$code-font-family: 'Fantasque', 'Fantasque Hack', "Menlo", "Inconsolata", "Consolas", "Roboto Mono",
+  "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+$base-font-size: 19px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit: 30px !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width: 800px !default;
+
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+
+$on-medium: $on-palm !default;
+$on-large: $on-laptop !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: #{$ratio}rem;
+}
+
+// Import pre-styling-overrides hook and style-partials.
+@import "minima/custom-variables",
+  // Hook to override predefined variables.
+  "minima/base",
+  // Defines element resets.
+  "minima/layout",
+  // Defines structure and style based on CSS selectors.
+  "minima/custom-styles" // Hook to override existing styles.
+;
