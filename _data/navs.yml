@@ -1,1 +1,32 @@
 root:
+  - title: Intro
+    sub:
+      - title: Think like a architecture
+        id: Ketaigu
+        url: 2022/11/16/Intro.html
+  - title: Data Layer
+    sub:
+      - title: Data Sources
+        id: Fukvefbiv
+        url: 2022/11/20/Data-Sources.html
+      - title: Repository Classes
+        id: Dujwisjiw
+        url: 2022/11/20/Repository-Classes.html
+      - title: Handling Multiple Data Sources in a Repository
+        id: Fukeri
+        url: 2022/11/20/Handling-Multiple-Data-Sources-in-a-Repository.html
+      - title: Immutability
+        id: Omodolhet
+        url: 2022/11/20/Immutability.html
+      - title: Threading
+        id: Ocahiih
+        url: 2022/11/20/Threading.html
+      - title: Errors
+        id: Voudota
+        url: 2022/11/20/Errors.html
+      - title: Multiple levels of repositories
+        id: Zefemoni
+        url: 2022/11/20/Multiple-levels-of-repositories.html
+      - title: Testing
+        id: Dedegejev
+        url: 2022/11/20/Testing.html
